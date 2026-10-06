@@ -1,284 +1,435 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rieg Pré-Moldados | Guabiruba/SC — Demo WolfStudio</title>
-<meta name="description" content="Demo comercial WolfStudio — Rieg Indústria de Pré-Moldados, Guabiruba/SC. Não é o site oficial.">
-<meta name="robots" content="noindex,nofollow">
+<title>Rieg Pré-Fabricados · Estruturas pré-moldadas em Guabiruba desde 1985 (demonstração)</title>
+<meta name="description" content="Galpões pré-moldados, lajes, estacas de concreto armado e estruturas metálicas. Fábrica na Rua São Pedro, 530, em Guabiruba/SC, desde 1985.">
+<meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600;700&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --paper:#ECEAE5;--slab:#DAD7D0;--line:#C4C0B7;
-  --graphite:#1E2226;--steel:#4B535B;--blue:#1F4E8C;--crane:#F2B705;
-  --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
-  --body:"Barlow","Segoe UI",system-ui,sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{font-family:var(--body);background:var(--paper);color:var(--graphite);line-height:1.6;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.wrap{width:min(1120px,90%);margin:0 auto}
-h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;letter-spacing:.005em}
-.demo{background:var(--graphite);color:#cfd3d6;font-size:.8rem;text-align:center;padding:.5rem 1rem}
-.demo b{color:var(--crane);font-weight:600}
-header{position:sticky;top:0;z-index:40;background:rgba(236,234,229,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
-.logo{display:flex;align-items:center;gap:.7rem}
-.mark{width:40px;height:40px;background:var(--graphite);color:var(--crane);display:grid;place-items:center;font:700 1.55rem/1 var(--display);border-radius:4px}
-.logo b{font:700 1.45rem/1 var(--display);letter-spacing:.06em;display:block}
-.logo small{display:block;font-size:.74rem;color:var(--steel);margin-top:2px}
-.links{display:flex;gap:1.6rem;align-items:center;font-weight:500;font-size:.95rem}
-.links a:not(.btn):hover{color:var(--blue)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.8rem 1.35rem;border-radius:4px;font-weight:600;font-size:.97rem;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:background .18s,color .18s,border-color .18s}
-.btn-y{background:var(--crane);color:var(--graphite)}
-.btn-y:hover{background:#ffc928}
-.btn-o{border-color:currentColor}
-.btn-o:hover{background:rgba(255,255,255,.1)}
-.btn-d{background:var(--graphite);color:#fff}
-.btn-d:hover{background:#343b42}
-.menu{display:none;background:none;border:2px solid var(--graphite);border-radius:4px;width:44px;height:44px;font-size:1.2rem;cursor:pointer}
-
-/* hero */
-.hero{background:var(--graphite);color:#fff;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:
- linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px) 0 0/40px 40px,
- linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px) 0 0/40px 40px}
-.hero-in{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center;padding:4.5rem 0 4rem}
-.hero h1{font-size:clamp(2.6rem,6.2vw,4.6rem);margin-bottom:1.1rem}
-.lead{color:#c4cacf;font-size:1.1rem;max-width:34rem;margin-bottom:1.8rem}
-.cta{display:flex;flex-wrap:wrap;gap:.8rem}
-.draw{width:100%;height:auto}
-.draw .d{stroke-dasharray:1;stroke-dashoffset:1;animation:dr 1.8s ease forwards}
-.draw .d2{animation-delay:.6s}.draw .d3{animation-delay:1.1s}
-@keyframes dr{to{stroke-dashoffset:0}}
-.facts{position:relative;border-top:1px solid rgba(255,255,255,.14)}
-.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-.fact{padding:1.3rem 1.2rem 1.4rem 0}
-.fact+.fact{border-left:1px solid rgba(255,255,255,.14);padding-left:1.4rem}
-.fact b{display:block;font:700 1.55rem/1.1 var(--display);color:var(--crane)}
-.fact span{font-size:.88rem;color:#b6bcc1}
-
-/* sections */
-section{padding:4.5rem 0}
-.head{max-width:40rem;margin-bottom:2.4rem}
-.head h2{font-size:clamp(2rem,4.4vw,3rem);margin-bottom:.7rem}
-.head p{color:var(--steel);font-size:1.05rem}
-.note{font-size:.84rem;color:var(--steel);border-left:3px solid var(--crane);padding:.15rem 0 .15rem .7rem;margin-top:1rem}
-.about{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start}
-.about p+p{margin-top:1rem}
-.ficha{background:#fff;border:1px solid var(--line);border-radius:6px;padding:.4rem 1.4rem}
-.ficha div{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
-.ficha div:last-child{border:0}
-.ficha dt{color:var(--steel);font-size:.9rem}
-.ficha dd{font-weight:500}
-.solutions{background:var(--slab)}
-.sol{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.sol article{background:var(--paper);border-radius:6px;padding:1.6rem;border-top:4px solid var(--graphite)}
-.sol h3{font-size:1.5rem;margin-bottom:.5rem}
-.sol p{color:var(--steel);font-size:.97rem}
-.cat{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
-.prod{display:grid;grid-template-columns:150px 1fr;background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.art{background:var(--slab);display:grid;place-items:center;padding:1rem;color:var(--graphite)}
-.art svg{width:100%;height:auto}
-.prod div:last-child{padding:1.3rem}
-.prod h3{font-size:1.45rem;margin-bottom:.35rem}
-.prod p{color:var(--steel);font-size:.94rem}
-.tag{display:inline-block;font-size:.76rem;font-weight:600;color:var(--blue);background:#e3ebf6;padding:.1rem .55rem;border-radius:3px;margin-bottom:.55rem}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;counter-reset:s;list-style:none}
-.steps li{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:6px;padding:1.5rem;position:relative}
-.steps li::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--crane);font:700 1.3rem var(--display);margin-bottom:.9rem}
-.steps h3{font-size:1.4rem;margin-bottom:.3rem}
-.steps p{color:var(--steel);font-size:.95rem}
-.contact{background:var(--graphite);color:#fff}
-.contact .head p{color:#b6bcc1}
-.cgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:2.5rem}
-.info li{list-style:none;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.14)}
-.info li:first-child{padding-top:0}
-.info small{display:block;color:#aab1b7;font-size:.82rem}
-.info a{color:var(--crane)}
-.form{background:var(--paper);color:var(--graphite);border-radius:6px;padding:1.6rem}
-.form h3{font-size:1.6rem;margin-bottom:1rem}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-label{display:block;font-size:.88rem;font-weight:600;margin-bottom:.9rem}
-select,input,textarea{display:block;width:100%;margin-top:.3rem;padding:.7rem .75rem;border:1.5px solid var(--line);border-radius:4px;background:#fff;font:inherit;color:inherit}
-textarea{resize:vertical;min-height:84px}
-.form .btn{width:100%}
-.hint{font-size:.8rem;color:var(--steel);margin-top:.7rem}
-footer{background:#14171a;color:#a3aab0;font-size:.82rem;padding:1.8rem 0 2.2rem}
-footer p+p{margin-top:.35rem}
-.wa{position:fixed;right:1rem;bottom:1rem;z-index:50;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.3)}
-.wa svg{width:28px;height:28px;fill:#fff}
-
-@media (max-width:900px){
-  .menu{display:block}
-  .links{display:none}
-  .links.open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;top:68px;left:0;right:0;background:var(--paper);padding:.5rem 5%;border-bottom:1px solid var(--line)}
-  .links.open a{padding:.9rem 0;border-bottom:1px solid var(--line)}
-  .links.open .btn{margin-top:.8rem;border:0}
-  .hero-in,.about,.cgrid{grid-template-columns:1fr}
-  .hero-in{padding:2.8rem 0 2.4rem;gap:1.5rem}
-  .sol,.steps,.cat{grid-template-columns:1fr}
-  .facts .wrap{grid-template-columns:1fr 1fr}
-  .fact:nth-child(3){border-left:0;padding-left:0}
-  .fact:nth-child(n+3){border-top:1px solid rgba(255,255,255,.14)}
-  section{padding:3.2rem 0}
-}
-@media (max-width:480px){.prod{grid-template-columns:1fr}.art{padding:1.2rem 3rem}.row{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){.draw .d{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+:root{--concreto:#EAEAE7;--preto:#272425;--vermelho:#AC0F13;--vinho:#6F0404;--grafite:#3C3F46;--cinza:#9F9D9E;--linha:#c9c9c4;
+  --dis:"Archivo Black","Arial Black",Impact,sans-serif;--corpo:"Archivo",Arial,sans-serif;--tec:"IBM Plex Sans Condensed","Arial Narrow",sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;color:var(--preto);font-family:var(--corpo);font-size:1.0625rem;line-height:1.55;overflow-x:hidden;
+  background-color:var(--concreto);background-image:linear-gradient(rgba(60,63,70,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(60,63,70,.07) 1px,transparent 1px);background-size:24px 24px}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--vinho)}
+:focus-visible{outline:3px solid var(--vermelho);outline-offset:3px}
+.skip{position:absolute;left:1rem;top:-4rem;background:var(--preto);color:#fff;padding:.7rem 1rem;z-index:99}
+.skip:focus{top:1rem}
+.demo{background:var(--preto);color:#d8d8d4;font-size:.8rem;text-align:center;padding:.3rem 1rem}
+.wrap{width:min(1180px,100% - 2rem);margin-inline:auto}
+h1,h2,h3{margin:0 0 .5em;line-height:1.05}
+h2{font-family:var(--dis);font-weight:400;font-size:clamp(1.8rem,5vw,2.8rem);letter-spacing:-.01em;text-transform:uppercase}
+h3{font-family:var(--corpo);font-weight:700;font-size:1.3rem}
+.tec{font-family:var(--tec);font-weight:600;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--grafite)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px;padding:.7rem 1.3rem;font-family:var(--tec);font-weight:600;font-size:1.05rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:2px solid var(--preto);cursor:pointer;background:transparent;color:var(--preto)}
+.btn-v{background:var(--vermelho);border-color:var(--vermelho);color:#fff}
+.btn-v:hover{background:var(--vinho);border-color:var(--vinho)}
+.btn:not(.btn-v):hover{background:var(--preto);color:#fff}
+/* topo */
+.topo{background:#fff;border-bottom:2px solid var(--preto)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:66px}
+.marca{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--preto);min-height:44px}
+.marca img{width:44px;height:auto}
+.marca b{font-family:var(--dis);font-weight:400;font-size:.95rem;letter-spacing:.02em;white-space:nowrap}
+.topo nav{display:none;gap:1.4rem;font-family:var(--tec);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.9rem}
+.topo nav a{color:var(--preto);text-decoration:none;padding:.7rem 0}
+.topo nav a:hover{color:var(--vermelho)}
+@media(min-width:960px){.topo nav{display:flex}}
+/* prancha */
+.prancha{padding:2rem 0 2.6rem}
+.folha{display:flex;justify-content:space-between;border-bottom:1px solid var(--preto);padding-bottom:.4rem;margin-bottom:1.4rem}
+.mesa{display:grid;gap:1.6rem}
+@media(min-width:960px){.mesa{grid-template-columns:1fr 340px;gap:0;border:2px solid var(--preto);background:rgba(255,255,255,.35)}.mesa .cotada{order:-1;padding:40px 28px 24px 52px;border-right:2px solid var(--preto)}.mesa .cota-h{top:12px;left:52px;right:28px}.mesa .cota-v{left:24px;top:40px;bottom:24px}}
+.legenda-col{display:flex;flex-direction:column;gap:1.2rem}
+@media(min-width:960px){.legenda-col{gap:0}.legenda-col>*{border-bottom:2px solid var(--preto)}.legenda-col>*:last-child{border-bottom:0}.leg-topo{padding:1.4rem 1.3rem}.legenda-col .acoes{padding:1.2rem 1.3rem;margin:0;flex-direction:column}.legenda-col .carimbo{border:0;margin:0}}
+.prancha h1{font-family:var(--dis);font-weight:400;font-size:clamp(2.2rem,7vw,2.9rem);line-height:1;letter-spacing:-.02em;margin:.4rem 0 .7rem}
+.lead{font-size:1.1rem;margin:0}
+.acoes{display:flex;flex-wrap:wrap;gap:.7rem}
+.cotada{position:relative;padding:28px 0 0 28px}
+.cota-h{position:absolute;top:0;left:28px;right:0;height:20px;border-left:1px solid var(--preto);border-right:1px solid var(--preto);display:flex;align-items:center;justify-content:center}
+.cota-h::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:1px solid var(--preto)}
+.cota-h span,.cota-v span{position:relative;background:var(--concreto);padding:0 .5rem;font-family:var(--tec);font-weight:600;font-size:.8rem;letter-spacing:.06em}
+.cota-v{position:absolute;left:0;top:28px;bottom:0;width:20px;border-top:1px solid var(--preto);border-bottom:1px solid var(--preto);display:flex;align-items:center;justify-content:center}
+.cota-v::before{content:"";position:absolute;top:0;bottom:0;left:50%;border-left:1px solid var(--preto)}
+.cota-v span{transform:rotate(-90deg);white-space:nowrap}
+.quadro{position:relative;border:2px solid var(--preto);background:#fff;padding:8px}
+.quadro img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.vista{display:block;padding:.4rem .2rem 0;font-size:.8rem}
+.carimbo{background:#fff;border:2px solid var(--preto);font-family:var(--tec);font-size:.85rem;display:grid;grid-template-columns:auto 1fr}
+.carimbo>*{border-right:1px solid var(--preto);border-bottom:1px solid var(--preto);padding:.45rem .7rem}
+.carimbo dd{border-right:0}
+.carimbo dt{font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--grafite);font-size:.75rem;display:flex;align-items:center}
+.carimbo dd{margin:0;font-weight:600;font-size:.98rem;color:var(--preto)}
+.carimbo .ult{border-bottom:0}
+/* números */
+.nums{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--preto);background:#fff;margin:0}
+@media(min-width:860px){.nums{grid-template-columns:repeat(4,1fr)}}
+.nums div{padding:1.1rem 1rem;border-right:1px solid var(--preto);border-bottom:1px solid var(--preto)}
+.nums dt{font-family:var(--dis);font-size:clamp(1.7rem,5vw,2.6rem);color:var(--vermelho);line-height:1}
+.nums dd{margin:.3rem 0 0;font-size:.98rem}
+.fonte{font-family:var(--tec);font-size:.88rem;color:var(--grafite);margin:.5rem 0 0}
+section.sec{padding:3.4rem 0}
+.titulo-sec{display:flex;align-items:baseline;gap:.8rem;border-bottom:2px solid var(--preto);margin-bottom:1.6rem}
+.titulo-sec .n{font-family:var(--tec);font-weight:600;color:var(--vermelho);font-size:1rem}
+.titulo-sec h2{margin:0 0 .3rem}
+/* fichas */
+.fichas{display:grid;gap:1.4rem}
+@media(min-width:760px){.fichas{grid-template-columns:1fr 1fr}}
+.ficha{background:#fff;border:2px solid var(--preto);display:grid;grid-template-rows:auto 1fr}
+.ficha img{width:100%;aspect-ratio:16/9;object-fit:cover;border-bottom:2px solid var(--preto)}
+.ficha .corpo{padding:1.1rem 1.1rem 1.2rem}
+.ficha .cod{font-family:var(--tec);font-weight:600;color:var(--vermelho);font-size:.85rem;letter-spacing:.1em}
+.ficha table{width:100%;border-collapse:collapse;font-family:var(--tec);font-size:1rem}
+.ficha th,.ficha td{border-top:1px solid var(--linha);padding:.4rem 0;text-align:left;vertical-align:top}
+.ficha th{font-weight:500;color:var(--grafite);width:45%}
+.ficha td{font-weight:600}
+.aviso{display:inline-block;border:1px dashed var(--grafite);padding:.35rem .7rem;font-family:var(--tec);font-size:.9rem;background:#fff;margin-bottom:1.2rem}
+/* etapas */
+.etapas{position:relative;color:#fff;background:var(--grafite)}
+.etapas::before{content:"";position:absolute;inset:0;background:url(assets/banner-patio-pecas-ponte-rolante.jpg) center/cover;opacity:.22}
+.etapas .wrap{position:relative}
+.etapas .titulo-sec{border-color:#fff}
+.etapas .titulo-sec .n{color:#ff8b8e}
+.passos{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:p}
+@media(min-width:860px){.passos{grid-template-columns:repeat(5,1fr)}}
+.passos li{counter-increment:p;border-top:2px solid #fff;padding:1rem .9rem 1rem 0;position:relative}
+@media(min-width:860px){.passos li{border-top:0;border-left:2px solid #fff;padding:0 1rem}}
+.passos li::before{content:"0" counter(p);font-family:var(--dis);font-size:2.2rem;display:block;color:#fff;opacity:.9}
+.passos b{display:block;font-family:var(--tec);font-weight:600;font-size:1.15rem;text-transform:uppercase;letter-spacing:.04em}
+.passos p{margin:.3rem 0 0;color:#e2e2df;font-size:.98rem}
+/* obras */
+.filtro{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem}
+.filtro button{font-family:var(--tec);font-weight:600;font-size:1rem;min-height:46px;padding:.4rem 1rem;border:2px solid var(--preto);background:#fff;color:var(--preto);cursor:pointer;text-transform:uppercase;letter-spacing:.04em}
+.filtro button[aria-pressed="true"]{background:var(--preto);color:#fff}
+.obras{display:grid;gap:1rem;list-style:none;padding:0;margin:0}
+@media(min-width:620px){.obras{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.obras{grid-template-columns:repeat(3,1fr)}}
+.obras li{background:#fff;border:2px solid var(--preto)}
+.obras li[hidden]{display:none}
+.obras img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.obras .leg{display:grid;grid-template-columns:1fr auto;gap:.2rem .6rem;padding:.6rem .8rem;border-top:2px solid var(--preto);font-family:var(--tec)}
+.obras .leg b{font-weight:600;font-size:1.02rem}
+.obras .leg span{font-size:.85rem;color:var(--grafite);text-transform:uppercase;letter-spacing:.06em}
+.obras .leg small{grid-column:1/3;color:var(--grafite);font-size:.85rem}
+.faixa-fotos{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;margin-top:1.4rem}
+@media(min-width:860px){.faixa-fotos{grid-template-columns:repeat(6,1fr)}}
+.faixa-fotos img{width:100%;aspect-ratio:1;object-fit:cover;border:2px solid var(--preto)}
+.lista-obras{columns:1;font-family:var(--tec);font-size:1rem;margin-top:1.4rem;background:#fff;border:2px solid var(--preto);padding:1rem 1.2rem}
+@media(min-width:760px){.lista-obras{columns:3}}
+.lista-obras h3{column-span:all;font-size:1.05rem;margin:.6rem 0 .3rem;font-family:var(--tec);text-transform:uppercase;letter-spacing:.06em;color:var(--vermelho)}
+.lista-obras p{margin:0 0 .6rem;break-inside:avoid}
+/* mapa */
+.mapa{display:grid;gap:1.4rem;align-items:center}
+@media(min-width:860px){.mapa{grid-template-columns:1.3fr 1fr}}
+.mapa svg{width:100%;height:auto;background:#fff;border:2px solid var(--preto)}
+.cidades{columns:2;list-style:none;padding:0;margin:0;font-family:var(--tec);font-size:1rem}
+.cidades li{padding:.2rem 0;border-bottom:1px solid var(--linha);break-inside:avoid}
+/* avaliações */
+.avs{display:grid;gap:1rem;list-style:none;padding:0;margin:0}
+@media(min-width:860px){.avs{grid-template-columns:repeat(3,1fr)}}
+.avs li{background:#fff;border:2px solid var(--preto);padding:1.1rem;border-left:8px solid var(--vermelho)}
+.avs p{margin:0 0 .6rem}
+.avs small{font-family:var(--tec);color:var(--grafite);font-size:.9rem}
+/* orçamento */
+.orc{display:grid;gap:1.4rem;background:#fff;border:2px solid var(--preto);padding:1.3rem}
+@media(min-width:860px){.orc{grid-template-columns:1fr 1fr;padding:2rem}}
+.orc label{display:block;font-family:var(--tec);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:.9rem;margin:.8rem 0 .3rem}
+.orc input,.orc select{width:100%;min-height:48px;border:2px solid var(--preto);padding:.5rem .7rem;font:inherit;background:var(--concreto)}
+.resumo{background:var(--concreto);border:2px dashed var(--grafite);padding:1rem;font-family:var(--tec);font-size:1.02rem;white-space:pre-line;min-height:9rem}
+.ok{font-family:var(--tec);color:var(--vinho);min-height:1.5em;margin:.4rem 0 0}
+/* rodapé */
+footer{background:var(--preto);color:#ddd;padding:3rem 0 1.8rem}
+footer a{color:#fff}
+.rod{display:grid;gap:1.6rem}
+@media(min-width:860px){.rod{grid-template-columns:1.2fr 1fr 1fr}}
+footer img{border:2px solid #fff}
+footer h2{color:#fff}
+footer h3{color:#fff;font-family:var(--tec);text-transform:uppercase;letter-spacing:.06em;font-size:1rem;margin-top:.4rem}
+footer table{width:100%;border-collapse:collapse;font-family:var(--tec)}
+footer th,footer td{text-align:left;border-bottom:1px solid #4a4647;padding:.4rem 0;font-weight:500}
+footer td{text-align:right}
+footer ul{list-style:none;margin:0;padding:0}
+footer li a{display:inline-flex;align-items:center;min-height:44px}
+.selo{width:120px;height:120px}
+.wolf{margin-top:2.2rem;padding-top:1rem;border-top:1px solid #4a4647;font-size:.85rem;color:#b3b0b0}
+.wolf p{margin:0 0 .3rem}
+/* ===== Movimento (WolfStudio v3) — só roda com JS e sem "reduzir movimento" ===== */
+:root{--e:cubic-bezier(.2,.7,.2,1)}
+.anim :is(.nums div,.titulo-sec,.aviso,.ficha,.passos li,.filtro,.obras li,.faixa-fotos img,.lista-obras,.mapa>*,.avs li,.orc,.fonte){transition:opacity .7s var(--e) var(--d,0ms),translate .8s var(--e) var(--d,0ms),scale .8s var(--e) var(--d,0ms),rotate .8s var(--e) var(--d,0ms),transform .35s var(--e),box-shadow .35s,border-color .25s,background-color .25s}
+.anim :is(.nums div,.titulo-sec,.aviso,.ficha,.passos li,.filtro,.obras li,.faixa-fotos img,.lista-obras,.mapa>*,.avs li,.orc,.fonte):not(.in){opacity:0;translate:var(--tx,0px) var(--ty,22px);scale:var(--sc,1)}
+@keyframes sobe{from{opacity:0;translate:0 18px}}
+@keyframes gira{to{rotate:360deg}}
+@media print{.anim *{opacity:1!important;translate:none!important;scale:none!important;clip-path:none!important}}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:12px}
+/* botões e menu */
+.btn{transition:background-color .2s,color .2s,border-color .2s,transform .2s var(--e),box-shadow .2s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--preto)}
+.btn-v:hover{box-shadow:4px 4px 0 var(--preto)}
+.btn:active{transform:translate(0,0);box-shadow:0 0 0 var(--preto)}
+footer .btn:hover{box-shadow:4px 4px 0 #fff}
+.topo nav a{position:relative;transition:color .2s}
+.topo nav a::after{content:"";position:absolute;left:0;right:0;bottom:.35rem;height:3px;background:var(--vermelho);scale:0 1;transform-origin:0 50%;transition:scale .3s var(--e)}
+.topo nav a:hover::after,.topo nav a.on::after{scale:1 1}
+.topo nav a.on{color:var(--vermelho)}
+/* prancha: a folha se desenha — foto entra em corte, cotas abrem do centro */
+.folha{animation:sobe .6s var(--e) both}
+.leg-topo>*{animation:sobe .7s var(--e) .1s both}
+.leg-topo>:nth-child(2){animation-delay:.2s}.leg-topo>:nth-child(3){animation-delay:.3s}
+.prancha .carimbo{animation:sobe .7s var(--e) .45s both}
+.legenda-col .acoes{animation:sobe .7s var(--e) .6s both}
+.quadro img{animation:corte 1s var(--e) .2s both}
+@keyframes corte{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.vista{animation:sobe .6s var(--e) 1s both}
+.cota-h{animation:cota-h 1s var(--e) .7s both}
+.cota-v{animation:cota-v 1s var(--e) .85s both}
+@keyframes cota-h{from{clip-path:inset(0 50% 0 50%)}to{clip-path:inset(0 0 0 0)}}
+@keyframes cota-v{from{clip-path:inset(50% 0 50% 0)}to{clip-path:inset(0 0 0 0)}}
+/* números e títulos de seção */
+.nums dt{font-variant-numeric:tabular-nums}
+.anim .titulo-sec{--tx:-24px;--ty:0px}
+/* fichas e obras: sombra deslocada, como desenho técnico */
+.ficha:hover,.obras li:hover,.avs li:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--vermelho)}
+.avs li:hover{box-shadow:6px 6px 0 var(--preto)}
+.filtro button{transition:background-color .2s,color .2s,transform .2s var(--e)}
+.filtro button:hover{transform:translateY(-2px)}
+.obras li:not([hidden]){animation:sobe .45s var(--e)}
+.anim .faixa-fotos img{--sc:.9;--ty:0px}
+.faixa-fotos img:hover{transform:scale(1.04)}
+/* mapa: as linhas partem de Guabiruba e as cidades aparecem */
+.anim .mapa svg g[opacity] path{stroke-dasharray:320;transition:stroke-dashoffset 1.6s ease .3s}
+.anim .mapa svg:not(.in) g[opacity] path{stroke-dashoffset:320}
+.mapa svg g[font-family] circle:not(:first-child),.mapa svg g[font-family] text:not(:nth-child(2)){transition:opacity .7s 1.1s}
+.anim .mapa svg:not(.in) g[font-family] circle:not(:first-child),.anim .mapa svg:not(.in) g[font-family] text:not(:nth-child(2)){opacity:0}
+/* roteiro de orçamento */
+.orc input,.orc select{transition:border-color .2s,box-shadow .2s,background-color .2s}
+.orc input:focus,.orc select:focus{background:#fff;box-shadow:4px 4px 0 var(--vermelho)}
+.resumo.novo{animation:marca .6s var(--e)}
+@keyframes marca{from{background-color:#fff;border-color:var(--vermelho)}}
+#t-av{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
+<script>(function(d){if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches)d.classList.add('anim')})(document.documentElement)</script>
 </head>
 <body>
-<div class="demo"><b>Demo comercial WolfStudio</b> — proposta visual. Não é o site oficial da Rieg.</div>
-<header>
-  <div class="wrap nav">
-    <a class="logo" href="#topo" aria-label="Rieg Pré-Moldados, início">
-      <span class="mark">R</span>
-      <span><b>RIEG</b><small>Pré-Moldados · Guabiruba/SC</small></span>
-    </a>
-    <button class="menu" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
-    <nav class="links" id="links">
-      <a href="#sobre">Sobre</a>
-      <a href="#solucoes">Soluções</a>
-      <a href="#catalogo">Catálogo</a>
-      <a href="#contato">Contato</a>
-      <a class="btn btn-y" href="#contato">Pedir orçamento</a>
-    </nav>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="demo" role="note">Demonstração WolfStudio — não é o site oficial.</div>
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio"><img src="assets/logo-rieg.png" width="241" height="220" alt=""><b>RIEG PRÉ-FABRICADOS</b></a>
+    <nav aria-label="Seções"><a href="#produtos">Produtos</a><a href="#etapas">Etapas</a><a href="#obras">Obras</a><a href="#regiao">Região</a><a href="#orcamento">Orçamento</a></nav>
+    <a class="btn btn-v" href="tel:+554733540106" style="min-height:44px;padding:.4rem .9rem">Ligar</a>
   </div>
 </header>
 
-<main id="topo">
-  <section class="hero" style="padding:0">
-    <div class="wrap hero-in">
-      <div>
-        <h1>Pré-moldados de concreto, fabricados em Guabiruba desde 1985</h1>
-        <p class="lead">Estruturas de concreto armado sob encomenda para obras do Vale do Itajaí. Você fala direto com a fábrica, do orçamento à entrega.</p>
-        <div class="cta">
-          <a class="btn btn-y" href="#contato">Pedir orçamento</a>
-          <a class="btn btn-o" href="#catalogo">Ver produtos</a>
+<main id="conteudo">
+  <section class="prancha" id="inicio" aria-labelledby="titulo">
+    <div class="wrap">
+      <div class="folha tec"><span>Folha 01 · Apresentação</span><span>Guabiruba/SC</span></div>
+      <div class="mesa">
+        <aside class="legenda-col">
+          <div class="leg-topo">
+            <span class="tec" style="color:var(--vermelho)">Estruturas pré-moldadas de concreto</span>
+            <h1 id="titulo">Rieg Pré-Fabricados</h1>
+            <p class="lead">Galpões, lajes, estacas e estruturas metálicas, fabricados e montados a partir de Guabiruba.</p>
+          </div>
+          <dl class="carimbo">
+            <dt>Fundação</dt><dd>maio de 1985</dd>
+            <dt>Fábrica</dt><dd>Rua São Pedro, 530</dd>
+            <dt>Atende</dt><dd>Vale do Itajaí e litoral de SC</dd>
+            <dt class="ult">Lema</dt><dd class="ult">Concretizando Planos</dd>
+          </dl>
+          <div class="acoes">
+            <a class="btn btn-v" href="tel:+554733540106">Ligar (47) 3354-0106</a>
+            <a class="btn" href="#orcamento">Roteiro de orçamento</a>
+          </div>
+        </aside>
+        <div class="cotada">
+          <div class="cota-h" aria-hidden="true"><span>Área industrial ≈ 30.000 m²</span></div>
+          <div class="cota-v" aria-hidden="true"><span>8.000 m² cobertos</span></div>
+          <div class="quadro">
+            <picture>
+              <source media="(max-width:620px)" srcset="assets/gmaps-galpao-patio-fabrica-silo.jpg" width="1280" height="960">
+              <img src="assets/gmaps-vista-aerea-fabrica.jpg" width="1400" height="1049" alt="Vista aérea da fábrica da Rieg em Guabiruba, com os galpões e o entorno" fetchpriority="high">
+            </picture>
+            <span class="vista tec">Vista 01 · fábrica, Rua São Pedro</span>
+          </div>
         </div>
       </div>
-      <svg class="draw" viewBox="0 0 480 380" fill="none" stroke="#fff" stroke-width="2" role="img" aria-label="Desenho técnico de um pórtico pré-moldado: dois pilares, viga e lajes">
-        <defs><pattern id="h" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="rgba(255,255,255,.28)" stroke-width="1.5"/></pattern></defs>
-        <path d="M30 312H450" stroke="rgba(255,255,255,.5)"/>
-        <g class="d" pathLength="1"><rect pathLength="1" x="72" y="312" width="86" height="22" fill="url(#h)"/><rect pathLength="1" x="322" y="312" width="86" height="22" fill="url(#h)"/></g>
-        <g class="d d2"><path pathLength="1" d="M97 312V112H133V312" fill="url(#h)"/><path pathLength="1" d="M347 312V112H383V312" fill="url(#h)"/>
-        <path pathLength="1" d="M133 190H156L133 214" fill="url(#h)"/><path pathLength="1" d="M347 190H324L347 214" fill="url(#h)"/></g>
-        <g class="d d3"><rect pathLength="1" x="70" y="84" width="340" height="30" fill="url(#h)"/>
-        <path pathLength="1" d="M56 84V58H424V84"/><path pathLength="1" d="M141 58V84M226 58V84M311 58V84"/></g>
-        <g stroke="#F2B705" stroke-width="1.5" fill="#F2B705" font-family="Barlow,Arial,sans-serif" font-size="14">
-          <path d="M115 358H365M115 350V366M365 350V366"/>
-          <text x="240" y="352" text-anchor="middle" stroke="none">vão livre</text>
-          <path d="M448 58V312M440 58H456M440 312H456"/>
-          <text x="440" y="190" text-anchor="middle" stroke="none" transform="rotate(-90 440 190)">altura</text>
-        </g>
-      </svg>
     </div>
-    <div class="facts"><div class="wrap">
-      <div class="fact"><b>Desde 1985</b><span>fabricando em Guabiruba</span></div>
-      <div class="fact"><b>Sob encomenda</b><span>peças conforme o projeto</span></div>
-      <div class="fact"><b>Produção em série</b><span>para obras com repetição</span></div>
-      <div class="fact"><b>Direto na fábrica</b><span>(47) 3354-0106</span></div>
-    </div></div>
   </section>
 
-  <section id="sobre">
-    <div class="wrap about">
-      <div>
-        <div class="head" style="margin-bottom:0">
-          <h2>Uma fábrica local, com mais de quatro décadas de concreto</h2>
-          <p>A Rieg fabrica estruturas pré-moldadas de concreto armado, sob encomenda e em série, no bairro São Pedro, em Guabiruba. Construtoras, engenheiros e obras da região contam com atendimento direto na fábrica, sem intermediários.</p>
-        </div>
-      </div>
-      <dl class="ficha">
-        <div><dt>Razão social</dt><dd>Rieg Indústria e Comércio de Pré-Moldados Ltda.</dd></div>
-        <div><dt>Atividade</dt><dd>Estruturas pré-moldadas de concreto armado</dd></div>
-        <div><dt>Produção</dt><dd>Sob encomenda e em série</dd></div>
-        <div><dt>Endereço</dt><dd>Rua São Pedro, 530 — São Pedro, Guabiruba/SC · CEP 88360-000</dd></div>
+  <section aria-labelledby="t-num" style="padding:0 0 1rem">
+    <div class="wrap">
+      <h2 id="t-num" class="tec" style="font-family:var(--tec);font-size:.9rem;letter-spacing:.1em;margin-bottom:.6rem">Em números</h2>
+      <dl class="nums">
+        <div><dt>1985</dt><dd>ano de fundação, em maio</dd></div>
+        <div><dt>30.000 m²</dt><dd>de área industrial, 8.000 m² cobertos</dd></div>
+        <div><dt>+1 milhão m²</dt><dd>de estruturas produzidas</dd></div>
+        <div><dt>113</dt><dd>obras concluídas listadas até 2019</dd></div>
       </dl>
+      <p class="fonte">Área, produção e obras: dados do site institucional anterior (captura de 2019).</p>
     </div>
   </section>
 
-  <section id="solucoes" class="solutions">
+  <section class="sec" id="produtos" aria-labelledby="t-prod">
     <div class="wrap">
-      <div class="head">
-        <h2>Soluções para quem constrói</h2>
-        <p>Do projeto à peça pronta, a fábrica produz o que a obra precisa.</p>
-      </div>
-      <div class="sol">
-        <article><h3>Estruturas sob encomenda</h3><p>Peças de concreto armado dimensionadas conforme o projeto e o memorial da sua obra.</p></article>
-        <article><h3>Elementos estruturais</h3><p>Pilares, vigas e componentes prontos para montagem industrializada.</p></article>
-        <article><h3>Produção em série</h3><p>Fabricação repetida quando o projeto exige volume e prazo definido.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section id="catalogo">
-    <div class="wrap">
-      <div class="head">
-        <h2>Produtos</h2>
-        <p>Linhas típicas de uma fábrica de pré-moldados. Especificações e medidas sob consulta.</p>
-        <p class="note">Itens ilustrativos da demonstração. O catálogo real entra com as fotos e medidas da Rieg.</p>
-      </div>
-      <div class="cat">
-        <article class="prod"><div class="art"><svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="8" y="26" width="104" height="30"/><circle cx="26" cy="41" r="8"/><circle cx="50" cy="41" r="8"/><circle cx="74" cy="41" r="8"/><circle cx="98" cy="41" r="0"/><path d="M8 66H112M8 62V70M112 62V70" stroke-width="1.5"/></svg></div>
-          <div><span class="tag">Exemplo</span><h3>Lajes pré-moldadas</h3><p>Lajes para edificação e cobertura, com especificação sob consulta.</p></div></article>
-        <article class="prod"><div class="art"><svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M30 72V14H48V72"/><path d="M48 30H66L48 44"/><rect x="62" y="12" width="52" height="16"/><path d="M14 72H64" stroke-width="1.5"/></svg></div>
-          <div><span class="tag">Exemplo</span><h3>Pilares e vigas</h3><p>Elementos estruturais pré-fabricados para montagem rápida em obra.</p></div></article>
-        <article class="prod"><div class="art"><svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="12" y="10" width="96" height="60"/><path d="M44 10V70M76 10V70M12 40H108" stroke-width="1.5"/></svg></div>
-          <div><span class="tag">Exemplo</span><h3>Painéis e fechamentos</h3><p>Peças de concreto para fechamento e vedação de galpões e fachadas.</p></div></article>
-        <article class="prod"><div class="art"><svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 62V30L44 12H106V40H78V62Z"/><path d="M14 72H78M14 68V76M78 68V76" stroke-width="1.5"/></svg></div>
-          <div><span class="tag">Exemplo</span><h3>Peças especiais sob projeto</h3><p>Fabricação sob medida, conforme memorial e desenho técnico.</p></div></article>
+      <div class="titulo-sec"><span class="n">02</span><h2 id="t-prod">Produtos</h2></div>
+      <p class="aviso">Especificações de referência do site anterior. Confirme com a engenharia da Rieg.</p>
+      <div class="fichas">
+        <article class="ficha">
+          <img src="assets/banner-galpao-concluido-fachada-cinza.jpg" width="940" height="340" loading="lazy" alt="Galpão pré-moldado concluído, fachada cinza com portas de carga">
+          <div class="corpo"><span class="cod">P-01</span><h3>Galpões pré-moldados</h3>
+            <table><tbody><tr><th scope="row">Vãos</th><td>até 30 m</td></tr><tr><th scope="row">Concreto</th><td>fck 35 MPa, cimento CP V-ARI RS</td></tr><tr><th scope="row">Para</th><td>indústrias, comércios, condomínios, ginásios, fazendas e hangares</td></tr></tbody></table></div>
+        </article>
+        <article class="ficha">
+          <img src="assets/laje-painel-pi-interior.jpg" width="700" height="394" loading="lazy" alt="Interior com laje e vigas pré-moldadas tipo painel Pi e pilares">
+          <div class="corpo"><span class="cod">P-02</span><h3>Lajes pré-moldadas</h3>
+            <table><tbody><tr><th scope="row">Convencional</th><td>tipo Volterrana, vãos até 590 cm</td></tr><tr><th scope="row">Treliçada</th><td>com tavela cerâmica ou EPS</td></tr><tr><th scope="row">Painel Pi</th><td>sob consulta</td></tr></tbody></table></div>
+        </article>
+        <article class="ficha">
+          <img src="assets/estacas-concreto-armado-empilhadas.jpg" width="700" height="489" loading="lazy" alt="Estacas de concreto armado empilhadas no pátio">
+          <div class="corpo"><span class="cod">P-03</span><h3>Estacas de concreto armado</h3>
+            <table><tbody><tr><th scope="row">Seções</th><td>18×18 e 20×20 cm</td></tr><tr><th scope="row">Comprimentos</th><td>6, 8, 10 e 12 m</td></tr><tr><th scope="row">Resistência</th><td>30 MPa</td></tr><tr><th scope="row">Carga de ruptura</th><td>25 tf</td></tr></tbody></table></div>
+        </article>
+        <article class="ficha">
+          <img src="assets/estrutura-metalica-cobertura-galpao.jpg" width="700" height="525" loading="lazy" alt="Cobertura metálica de galpão grande vista de baixo">
+          <div class="corpo"><span class="cod">P-04</span><h3>Estruturas metálicas</h3>
+            <table><tbody><tr><th scope="row">Atuação</th><td>fabricação e montagem</td></tr><tr><th scope="row">Projeto</th><td>sob consulta</td></tr></tbody></table></div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section style="padding-top:0">
+  <section class="sec etapas" id="etapas" aria-labelledby="t-etapas">
     <div class="wrap">
-      <div class="head"><h2>Como pedir um orçamento</h2></div>
-      <ol class="steps">
-        <li><h3>Envie os dados</h3><p>Tipo de peça, quantidade e o projeto, se já tiver.</p></li>
-        <li><h3>Receba o retorno</h3><p>A equipe confirma disponibilidade, medidas e prazo.</p></li>
-        <li><h3>Combine a entrega</h3><p>Defina a retirada ou o envio para a sua obra.</p></li>
+      <div class="titulo-sec"><span class="n">03</span><h2 id="t-etapas">Do orçamento ao pós-venda</h2></div>
+      <ol class="passos">
+        <li><b>Orçamento</b><p>Conversa sobre a obra e o que ela precisa.</p></li>
+        <li><b>Projeto</b><p>Projeto e compatibilização.</p></li>
+        <li><b>Fabricação</b><p>Peças feitas na fábrica, em Guabiruba.</p></li>
+        <li><b>Montagem</b><p>Frota própria com caminhões munck (dado do site anterior).</p></li>
+        <li><b>Pós-venda</b><p>Acompanhamento depois da entrega, conforme as normas técnicas.</p></li>
       </ol>
     </div>
   </section>
 
-  <section class="contact" id="contato">
+  <section class="sec" id="obras" aria-labelledby="t-obras">
     <div class="wrap">
-      <div class="head">
-        <h2>Fale com a fábrica</h2>
-        <p>Preencha o pedido e envie pelo WhatsApp, ou ligue direto.</p>
+      <div class="titulo-sec"><span class="n">04</span><h2 id="t-obras">Obras</h2></div>
+      <div class="filtro" role="group" aria-label="Filtrar obras por cidade">
+        <button type="button" aria-pressed="true" data-c="todas">Todas</button>
+        <button type="button" aria-pressed="false" data-c="Guabiruba">Guabiruba</button>
+        <button type="button" aria-pressed="false" data-c="Tijucas">Tijucas</button>
+        <button type="button" aria-pressed="false" data-c="Gaspar">Gaspar</button>
+        <button type="button" aria-pressed="false" data-c="Nova Trento">Nova Trento</button>
       </div>
-      <div class="cgrid">
-        <ul class="info">
-          <li><small>Telefone</small><a href="tel:+554733540106">(47) 3354-0106</a></li>
-          <li><small>WhatsApp</small><a href="https://wa.me/554733540106" target="_blank" rel="noopener">(47) 3354-0106</a></li>
-          <li><small>Endereço</small>Rua São Pedro, 530 — São Pedro<br>Guabiruba/SC · CEP 88360-000</li>
-          <li><small>Atendimento</small>Seg–Sex, 08h–12h e 13h30–17h30 (a confirmar)</li>
-        </ul>
-        <form class="form" id="pedido">
-          <h3>Pedido rápido</h3>
-          <div class="row">
-            <label>Tipo de peça
-              <select id="tipo"><option>Lajes pré-moldadas</option><option>Pilares e vigas</option><option>Painéis e fechamentos</option><option>Peça especial sob projeto</option><option>Outro</option></select>
-            </label>
-            <label>Quantidade
-              <input id="qtd" placeholder="Ex.: 40 peças">
-            </label>
-          </div>
-          <label>Prazo desejado
-            <input id="prazo" placeholder="Ex.: início da obra em novembro">
-          </label>
-          <label>Detalhes
-            <textarea id="det" placeholder="Medidas, local da obra, projeto..."></textarea>
-          </label>
-          <button class="btn btn-d" type="submit">Enviar pelo WhatsApp</button>
-          <p class="hint">Abre o WhatsApp com a mensagem pronta. Nada é enviado antes de você confirmar.</p>
+      <ul class="obras" id="lista-obras">
+        <li data-c="Guabiruba"><img src="assets/obra-capela-sao-pedro-guabiruba-estrutura.jpg" width="700" height="525" loading="lazy" alt="Estrutura pré-moldada da Capela São Pedro em montagem"><div class="leg"><b>Capela São Pedro</b><span>Guabiruba</span><small>Estrutura pré-moldada · concluída</small></div></li>
+        <li data-c="Guabiruba"><img src="assets/obra-m7-hangar-guabiruba-transporte-pecas.jpg" width="700" height="525" loading="lazy" alt="Carreta com peças de concreto na montagem do hangar M7"><div class="leg"><b>M7 Hangar</b><span>Guabiruba</span><small>Hangar · concluída</small></div></li>
+        <li data-c="Guabiruba"><img src="assets/obra-textil-lira-guabiruba.jpg" width="700" height="391" loading="lazy" alt="Prédio industrial azul e branco com caixa-d'água da Têxtil Lira"><div class="leg"><b>Têxtil Lira</b><span>Guabiruba</span><small>Industrial · em andamento em 2017–18</small></div></li>
+        <li data-c="Tijucas"><img src="assets/obra-atacado-motter-tijucas.jpg" width="700" height="525" loading="lazy" alt="Galpões de concreto cinza do Atacado Motter"><div class="leg"><b>Atacado Motter</b><span>Tijucas</span><small>Galpões · concluída</small></div></li>
+        <li data-c="Gaspar"><img src="assets/obra-britagem-silo-gaspar.jpg" width="394" height="700" loading="lazy" alt="Montagem de pilares altos na Britagem Silo"><div class="leg"><b>Britagem Silo</b><span>Gaspar</span><small>Pilares altos · concluída</small></div></li>
+        <li data-c="Nova Trento"><img src="assets/obra-academia-san-remo-nova-trento.jpg" width="700" height="525" loading="lazy" alt="Estrutura da Academia San Remo em montagem, com peças e caminhão"><div class="leg"><b>Academia San Remo</b><span>Nova Trento</span><small>Estrutura · concluída</small></div></li>
+      </ul>
+      <div class="faixa-fotos">
+        <img src="assets/galpao-pre-moldado-estrutura-4-pisos-montagem.jpg" width="700" height="394" loading="lazy" alt="Estrutura pré-moldada de vários pisos em montagem">
+        <img src="assets/galpao-pre-moldado-concluido-caixa-dagua.jpg" width="700" height="394" loading="lazy" alt="Galpão de concreto concluído com caixa-d'água em torre">
+        <img src="assets/banner-galpao-concluido-revestimento-madeira.jpg" width="940" height="340" loading="lazy" alt="Galpão concluído com fachada amadeirada">
+        <img src="assets/banner-estrutura-pre-moldada-dois-pisos.jpg" width="940" height="340" loading="lazy" alt="Estrutura pré-moldada de dois pisos em montagem, com vigas e pilares">
+        <img src="assets/banner-interior-galpao-cobertura.jpg" width="940" height="340" loading="lazy" alt="Interior de galpão com cobertura metálica e iluminação zenital">
+        <img src="assets/galpao-pre-moldado-estrutura-telhado.jpg" width="700" height="525" loading="lazy" alt="Estrutura de galpão com pilares e tesouras sobre gramado">
+      </div>
+      <div class="lista-obras">
+        <h3>Algumas obras da lista do site anterior</h3>
+        <p><strong>Guabiruba:</strong> Capela São Pedro, M7 Hangar, M7 Malhas, Hargotex, Biawi, Carol Padaria, Cores e Tons, Linha Leve, JSC Têxtil, Kohmar, Malhas Odisi.</p>
+        <p><strong>Brusque:</strong> HJ Tinturaria (e ampliação), AL Têxtil, Leite Confecções, Feratex Malhas, Elotex, Embreex, Edvan Malhas.</p>
+        <p><strong>Outras cidades:</strong> Britagem Silo e Andritex (Gaspar), Atacado Motter e Cerâmica Tupy (Tijucas), Itadisco e Construrenova (Itajaí), Condomínio Aeronáutico Costa Esmeralda (Porto Belo), Academia San Remo (Nova Trento), Cartonagem Batistense (São João Batista), Fisk (Balneário Piçarras).</p>
+      </div>
+      <p class="fonte">Fotos e lista: site institucional anterior da Rieg (2013–2019).</p>
+    </div>
+  </section>
+
+  <section class="sec" id="regiao" aria-labelledby="t-reg" style="padding-top:1rem">
+    <div class="wrap">
+      <div class="titulo-sec"><span class="n">05</span><h2 id="t-reg">De Blumenau a Bombinhas</h2></div>
+      <div class="mapa">
+        <svg viewBox="0 0 560 360" role="img" aria-labelledby="t-mapa-svg">
+          <title id="t-mapa-svg">Esquema das 17 cidades com obras da Rieg, do Vale do Itajaí ao litoral</title>
+          <g stroke="#c9c9c4" stroke-width="1"><path d="M0 60H560M0 120H560M0 180H560M0 240H560M0 300H560M70 0V360M140 0V360M210 0V360M280 0V360M350 0V360M420 0V360M490 0V360"/></g>
+          <path d="M470 20 C 480 80, 500 110, 490 150 S 470 220, 520 250 S 510 320, 540 350" fill="none" stroke="#3C3F46" stroke-width="2" stroke-dasharray="6 5"/>
+          <text x="512" y="40" font-family="Arial" font-size="12" fill="#3C3F46">mar</text>
+          <g stroke="#AC0F13" stroke-width="1.5" opacity=".5" fill="none"><path d="M200 170 L80 70 M200 170 L150 90 M200 170 L215 110 M200 170 L330 70 M200 170 L395 80 M200 170 L440 110 M200 170 L440 40 M200 170 L425 160 M200 170 L380 190 M200 170 L430 220 M200 170 L470 250 M200 170 L495 285 M200 170 L380 270 M200 170 L250 270 M200 170 L180 290 M200 170 L130 200"/></g>
+          <g font-family="Arial" font-size="12" fill="#272425">
+            <circle cx="200" cy="170" r="9" fill="#AC0F13"/><text x="152" y="160" font-weight="700">Guabiruba</text>
+            <circle cx="80" cy="70" r="4"/><text x="40" y="60">Blumenau</text>
+            <circle cx="150" cy="90" r="4"/><text x="120" y="82">Gaspar</text>
+            <circle cx="215" cy="110" r="4"/><text x="222" y="108">Ilhota</text>
+            <circle cx="330" cy="70" r="4"/><text x="300" y="60">Navegantes</text>
+            <circle cx="440" cy="40" r="4"/><text x="352" y="36">Bal. Piçarras</text>
+            <circle cx="395" cy="80" r="4"/><text x="402" y="84">Itajaí</text>
+            <circle cx="440" cy="110" r="4"/><text x="340" y="122">Bal. Camboriú</text>
+            <circle cx="380" cy="190" r="4"/><text x="318" y="206">Camboriú</text>
+            <circle cx="425" cy="160" r="4"/><text x="432" y="164">Itapema</text>
+            <circle cx="430" cy="220" r="4"/><text x="437" y="224">Porto Belo</text>
+            <circle cx="470" cy="250" r="4"/><text x="477" y="254">Bombinhas</text>
+            <circle cx="495" cy="285" r="4"/><text x="440" y="304">Tijucas</text>
+            <circle cx="380" cy="270" r="4"/><text x="300" y="290">S. João Batista</text>
+            <circle cx="250" cy="270" r="4"/><text x="210" y="290">Nova Trento</text>
+            <circle cx="180" cy="290" r="4"/><text x="120" y="312">Botuverá</text>
+            <circle cx="130" cy="200" r="4"/><text x="70" y="220">Brusque</text>
+          </g>
+          <text x="12" y="350" font-family="Arial" font-size="11" fill="#3C3F46">Esquema fora de escala</text>
+        </svg>
+        <div>
+          <p>Obras em 17 cidades do Vale do Itajaí e do litoral, segundo a lista do site anterior:</p>
+          <ul class="cidades"><li>Guabiruba</li><li>Brusque</li><li>Gaspar</li><li>Blumenau</li><li>Ilhota</li><li>Navegantes</li><li>Itajaí</li><li>Balneário Piçarras</li><li>Balneário Camboriú</li><li>Camboriú</li><li>Itapema/Meia Praia</li><li>Porto Belo</li><li>Bombinhas</li><li>Tijucas</li><li>São João Batista</li><li>Nova Trento</li><li>Botuverá</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="t-av" style="padding-top:1rem">
+    <div class="wrap">
+      <div class="titulo-sec"><span class="n">06</span><h2 id="t-av">4,6★ em 35 avaliações</h2></div>
+      <ul class="avs">
+        <li><p>“Empresa seria ótimos profissionais serviços dê muita qualidade já é o 4 galpão que fizemos com eles e com certeza faremos mais”</p><small>juliano rampelotti · 5★ · 20/08/2023</small></li>
+        <li><p>“O tempo de história dessa empresa, seriedade e qualidade, lhe tornam ‘Top’ no seu ramo de atividade.”</p><small>Glodoaldo Pinheiro · 5★ · 14/04/2018</small></li>
+        <li><p>“Muito bom o atendimento, e muito bem feito parabens ...”</p><small>Marcelo Campos · 4★ · 10/09/2021</small></li>
+      </ul>
+      <p class="fonte">Avaliações públicas no Google.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="orcamento" aria-labelledby="t-orc" style="padding-top:1rem">
+    <div class="wrap">
+      <div class="titulo-sec"><span class="n">07</span><h2 id="t-orc">Roteiro de orçamento</h2></div>
+      <div class="orc">
+        <form id="roteiro">
+          <p style="margin:0">Preencha para ter os dados à mão na hora de ligar. Nada é enviado por esta página.</p>
+          <label for="tipo">Tipo de obra</label>
+          <select id="tipo"><option>Galpão pré-moldado</option><option>Laje pré-moldada</option><option>Estacas de concreto armado</option><option>Estrutura metálica</option></select>
+          <label for="cidade">Cidade da obra</label>
+          <input id="cidade" type="text" autocomplete="address-level2">
+          <label for="area">Área aproximada (m²)</label>
+          <input id="area" type="text" inputmode="numeric">
+          <label for="prazo">Prazo desejado</label>
+          <select id="prazo"><option>até 3 meses</option><option>de 3 a 6 meses</option><option>mais de 6 meses</option><option>ainda não sei</option></select>
         </form>
+        <div>
+          <h3>Resumo para a ligação</h3>
+          <div class="resumo" id="resumo" aria-live="polite"></div>
+          <p class="ok" id="ok" role="status"></p>
+          <div class="acoes" style="margin:0">
+            <button class="btn" type="button" id="copiar">Copiar resumo</button>
+            <a class="btn btn-v" href="tel:+554733540106">Ligar (47) 3354-0106</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -286,25 +437,129 @@ footer p+p{margin-top:.35rem}
 
 <footer>
   <div class="wrap">
-    <p>Rieg Indústria de Pré-Moldados · Rua São Pedro, 530 · Guabiruba/SC · (47) 3354-0106</p>
-    <p>Não confundir com Rieg Materiais de Construção, Rieg Construções ou Guindastes Rieg, empresas distintas.</p>
-    <p>Demo criada pela WolfStudio</p>
+    <div class="rod">
+      <div>
+        <img src="assets/gmaps-sede-escritorio-e-galpao-rua-sao-pedro.jpg" width="1280" height="960" loading="lazy" alt="Sede da Rieg na Rua São Pedro: prédio de escritório e estrutura de galpão">
+      </div>
+      <div>
+        <h2>Rieg Pré-Fabricados</h2>
+        <p>Rua São Pedro, 530 · São Pedro<br>Guabiruba/SC · 88360-000</p>
+        <ul>
+          <li><a href="https://www.google.com/maps?cid=7117895164639560933" target="_blank" rel="noopener">Abrir no Google Maps</a></li>
+          <li><a href="tel:+554733540106">Ligar (47) 3354-0106</a></li>
+          <li><a href="https://www.instagram.com/riegprefabricados/" target="_blank" rel="noopener">Instagram @riegprefabricados</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Horário</h3>
+        <table><tbody>
+          <tr><th scope="row">Seg a qui</th><td>7h30–12h · 13h–17h30</td></tr>
+          <tr><th scope="row">Sex</th><td>7h30–12h · 13h–16h30</td></tr>
+          <tr><th scope="row">Sáb e dom</th><td>fechado</td></tr>
+        </tbody></table>
+        <svg class="selo" viewBox="0 0 120 120" role="img" aria-label="41 anos, Concretizando Planos" style="margin-top:1rem">
+          <rect x="22" y="22" width="76" height="76" transform="rotate(45 60 60)" fill="none" stroke="#AC0F13" stroke-width="4"/>
+          <text x="60" y="62" text-anchor="middle" font-family="Archivo Black, Arial Black, sans-serif" font-size="30" fill="#fff">41</text>
+          <text x="60" y="80" text-anchor="middle" font-family="Arial" font-size="10" fill="#ddd" letter-spacing="2">ANOS</text>
+          <text x="60" y="116" text-anchor="middle" font-family="Arial" font-size="9" fill="#bbb">CONCRETIZANDO PLANOS</text>
+        </svg>
+      </div>
+    </div>
+    <div class="wolf">
+      <p>Demonstração feita por WolfStudio. Não é o site oficial da Rieg Pré-Fabricados.</p>
+      <p>Fotos: site institucional anterior da Rieg e Google Maps, usadas só nesta demonstração.</p>
+    </div>
   </div>
 </footer>
-<a class="wa" href="https://wa.me/554733540106" target="_blank" rel="noopener" aria-label="Abrir WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.8 1.2 2.1 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.1z"/></svg></a>
+
 <script>
-const b=document.getElementById('menuBtn'),n=document.getElementById('links');
-b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');b.setAttribute('aria-expanded',false)}));
-document.getElementById('pedido').addEventListener('submit',e=>{
-  e.preventDefault();
-  const v=i=>document.getElementById(i).value.trim();
-  let m='Olá, Rieg! Gostaria de um orçamento.\nPeça: '+v('tipo');
-  if(v('qtd'))m+='\nQuantidade: '+v('qtd');
-  if(v('prazo'))m+='\nPrazo: '+v('prazo');
-  if(v('det'))m+='\nDetalhes: '+v('det');
-  window.open('https://wa.me/554733540106?text='+encodeURIComponent(m),'_blank','noopener');
-});
+(function(){
+  var bt=[].slice.call(document.querySelectorAll('.filtro button')),it=[].slice.call(document.querySelectorAll('#lista-obras li'));
+  bt.forEach(function(b){b.addEventListener('click',function(){bt.forEach(function(x){x.setAttribute('aria-pressed',x===b)});var c=b.dataset.c;it.forEach(function(li){li.hidden=!(c==='todas'||li.dataset.c===c)});});});
+  var f=document.getElementById('roteiro'),r=document.getElementById('resumo'),ok=document.getElementById('ok');
+  function monta(){r.textContent='Pedido de orçamento, Rieg Pré-Fabricados\nObra: '+f.tipo.value+'\nCidade: '+(f.cidade.value.trim()||'sob consulta')+'\nÁrea aproximada: '+(f.area.value.trim()?f.area.value.trim()+' m²':'sob consulta')+'\nPrazo: '+f.prazo.value;}
+  f.addEventListener('input',monta);f.addEventListener('change',monta);monta();
+  document.getElementById('copiar').addEventListener('click',function(){
+    var t=r.textContent;
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){ok.textContent='Resumo copiado.'},function(){ok.textContent='Selecione o texto e copie.'});}else{ok.textContent='Selecione o texto e copie.';}
+  });
+})();
+</script>
+<script>
+/* Movimento (WolfStudio v3): revelar ao rolar, contadores e menu ativo. */
+(function(){
+  var R=document.documentElement; if(!R.classList.contains('anim')) return;
+  try{
+    var SEL='.nums div,.titulo-sec,.aviso,.ficha,.passos li,.filtro,.obras li,.faixa-fotos img,.lista-obras,.mapa>*,.avs li,.orc,.fonte', CNT='#t-av';
+    var io=new IntersectionObserver(function(es){
+      var n=0;
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var el=e.target; io.unobserve(el);
+        if(n) el.style.setProperty('--d',Math.min(n,7)*90+'ms');
+        n++; el.classList.add('in');
+        setTimeout(function(){el.style.removeProperty('--d')},1700);
+      });
+    },{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    var pend=[].slice.call(document.querySelectorAll(SEL));
+    pend.forEach(function(el){io.observe(el)});
+    /* rolagem rápida pode pular um bloco: o que já ficou para cima aparece sem esperar */
+    var tv=0;
+    function varre(){pend=pend.filter(function(el){
+      if(el.classList.contains('in')) return false;
+      if(el.getBoundingClientRect().bottom<0){io.unobserve(el);el.classList.add('in');return false}
+      return true;
+    })}
+
+    function conta(el){
+      var tn=null;
+      [].some.call(el.childNodes,function(c){if(c.nodeType===3&&/\d,\d/.test(c.nodeValue)){tn=c;return true}});
+      if(!tn) return;
+      var full=tn.nodeValue, m=full.match(/(\d+),(\d)/), alvo=parseFloat(m[1]+'.'+m[2]), t0=null;
+      function f(t){
+        if(!t0) t0=t;
+        var p=Math.min(1,(t-t0)/1100), v=alvo*(1-Math.pow(1-p,3));
+        tn.nodeValue=p<1?full.replace(m[0],v.toFixed(1).replace('.',',')):full;
+        if(p<1) requestAnimationFrame(f);
+      }
+      requestAnimationFrame(f);
+    }
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cio.unobserve(e.target);conta(e.target)}})},{threshold:.6});
+    [].forEach.call(document.querySelectorAll(CNT),function(el){cio.observe(el)});
+
+    var links=[].slice.call(document.querySelectorAll('nav a[href^="#"]')), mapa={};
+    var sio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      links.forEach(function(a){a.classList.remove('on')}); mapa[e.target.id].classList.add('on');
+    })},{rootMargin:'-40% 0px -55% 0px'});
+    links.forEach(function(a){var s=document.getElementById(a.getAttribute('href').slice(1)); if(s&&s.id!=='conteudo'){mapa[s.id]=a;sio.observe(s)}});
+
+    var espera=false;
+    function rolar(){
+      espera=false; var y=window.scrollY||0;
+      R.classList.toggle('rolou',y>8);
+      clearTimeout(tv); if(pend.length) tv=setTimeout(varre,180);
+      if(y<160) links.forEach(function(a){a.classList.remove('on')});
+
+    }
+    window.addEventListener('scroll',function(){if(!espera){espera=true;requestAnimationFrame(rolar)}},{passive:true});
+    window.addEventListener('resize',rolar);
+    rolar();
+    /* números inteiros da faixa "Em números" contam até o valor */
+    [].forEach.call(document.querySelectorAll('.nums dt'),function(dt){
+      var m=dt.textContent.match(/^(\d{1,3}(?:\.\d{3})*)(.*)$/); if(!m) return;
+      var alvo=parseInt(m[1].replace(/\./g,''),10); if(alvo===1985) return;
+      var o=new IntersectionObserver(function(es){
+        if(!es[0].isIntersecting) return; o.disconnect(); var t0=null;
+        (function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1300),v=Math.round(alvo*(1-Math.pow(1-p,3)));
+          dt.textContent=p<1?v.toLocaleString('pt-BR')+m[2]:m[0]; if(p<1) requestAnimationFrame(f);})(performance.now());
+      },{threshold:.6});
+      o.observe(dt);
+    });
+    var rs=document.getElementById('resumo'), fr=document.getElementById('roteiro');
+    if(rs&&fr) fr.addEventListener('input',function(){rs.classList.remove('novo'); void rs.offsetWidth; rs.classList.add('novo')});
+  }catch(err){R.classList.remove('anim')}
+})();
 </script>
 </body>
 </html>
